@@ -58,10 +58,10 @@ _start = [
         Button.inline("Settings ⚙️", data="setter"),
     ],
     [
-        Button.inline("Sᴛᴀᴛs ✨", data="stat"),
-        Button.inline("Bʀᴏᴀᴅᴄᴀsᴛ 📻", data="bcast"),
+        Button.inline("Stats ✨", data="stat"),
+        Button.inline("Broadcasr 📻", data="bcast"),
     ],
-    [Button.inline("TɪᴍᴇZᴏɴᴇ 🌎", data="tz")],
+    [Button.inline("Timezone 🌎", data="tz")],
 ]
 
 
@@ -224,7 +224,7 @@ async def timezone_(event):
     name = "Timezone"
     async with event.client.conversation(pru) as conv:
         await conv.send_message(
-            "Send Your TimeZone From This List [Check From Here](http://www.timezoneconverter.com/cgi-bin/findzone.tzc)"
+            "Send Your TimeZone From This List.\n\n[Check From Here](http://www.timezoneconverter.com/cgi-bin/findzone.tzc)"
         )
         response = conv.wait_event(events.NewMessage(chats=pru))
         response = await response
